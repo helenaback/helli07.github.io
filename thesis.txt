@@ -4,10 +4,13 @@ Thesis
 
 2. Vorwort 
 
-3. Einleitung 
+3.1 Einleitung 
+3.2 Einbettung in die aktuelle Fachdiskussion 
+3.3 Zielsetzung 
 
 4. Hauptteil 
 
 5. Fazit 
 
 6. Literaturverzeichnis 
+
