@@ -9,13 +9,15 @@ body {
 header {
     text-align: center;
 }
+
 img.banner {
     width: 100%;
 }
-img.user{
+
+img.user {
     border-radius: 50%;
     margin-top: -50px;
-    }
+}
 
 main {
     background-color: white;
@@ -43,20 +45,20 @@ a {
 
 footer {
     border-top: 1px solid black;
-    padding: lem 2em 3em 2em; 
+    padding: lem 2em 3em 2em;
 }
 
-footer .back{
+footer .back {
     float: left;
 }
 
-footer .next{
-    float:right;
+footer .next {
+    float: right;
 }
 
 
 .shadow {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
 }
