@@ -33,12 +33,6 @@ main {
     /*Seite in Mitte gerückt*/
 }
 
-#map{
-    width: 100%;
-    height: 600px;
-    border: 1px solid gray;
-}
-
 main p{
 
     font-family: 'Roboto', sans-serif;
