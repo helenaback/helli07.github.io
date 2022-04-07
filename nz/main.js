@@ -10,6 +10,8 @@ let coords = [-34.42, 172.67];
 
 let map = L.map('map').setView(coords, zoom);
 
+console.log(ETAPPEN)
+
 let popup = `<h3>Cape Reinga</h3>
             <ul>
                 <li> geogr. Länge: ${lng}</li>
