@@ -67,13 +67,13 @@ for (let huts of HUTS){
             <ul>
                 <li> geogr.Breite: ${huts.lng} </li>
                 <li> geogr.Länge: ${huts.lat} </li>
-                <li> Nummer: ${huts.region} </li>
+                <li> Region: ${huts.region} </li>
                 <li> <a href="${huts.image}">Link zum Bild</a> </li>
                 <li> <a href="${huts.link}">Link zur Website</a></li>
                 
             </ul>
         `;
-    L.marker([huts.lat, huts.lng]).addTo(map)
+    L.circleMarker([huts.lat, huts.lng]).addTo(map)
         .bindPopup(popup)
 
 }
