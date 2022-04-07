@@ -42,7 +42,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //
 
 
-for (let etappe of ETAPPEN){
+for (let etappe of ETAPPEN) {
     //console.log(etappe)
     let popup = `<h3>${etappe.titel} (Etappe ${etappe.nr})</h3>
             <ul>
@@ -61,19 +61,17 @@ for (let etappe of ETAPPEN){
 
 
 //DOC Hütten anzeigen 
-for (let huts of HUTS){
+for (let hut of HUTS) {
     //console.log(etappe)
-    let popup = `<h3>${huts.name}</h3>
-            <ul>
-                <li> geogr.Breite: ${huts.lng} </li>
-                <li> geogr.Länge: ${huts.lat} </li>
-                <li> Region: ${huts.region} </li>
-                <li> <a href="${huts.image}">Link zum Bild</a> </li>
-                <li> <a href="${huts.link}">Link zur Website</a></li>
-                
-            </ul>
+    let popup = `
+                <h3>${hut.name}</h3>
+                <h4>${hut.region}</h4>
+                <hr>
+                <p>${hut.info}</p>
+                <img src="${hut.image}" alt="Vorschaubild">
+                <hr>
+                <a href="${hut.link}">Link zur Hütte</a>
         `;
-    L.circleMarker([huts.lat, huts.lng]).addTo(map)
-        .bindPopup(popup)
-
-}
+    L.circleMarker([hut.lat, hut.lng]).addTo(map)
+        .bindPopup(popup);
+    }
