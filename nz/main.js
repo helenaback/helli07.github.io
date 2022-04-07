@@ -18,16 +18,15 @@ let map = L.map('map').setView(coords, zoom);
 //console.log(ETAPPEN[0].wikipedia);
 //console.log(ETAPPEN[0].lng);
 
-let popup = `<h3>${ETAPPEN[0].titel} (Etappe ${ETAPPEN[0].nr}</h3>
-            <ul>
-                <li> geogr.Breite: ${ETAPPEN[18].long} </li>
-                <li> geogr.Länge: ${ETAPPEN[18].lat} </li>
-                <li> Nummer: ${ETAPPEN[18].nr} </li>
-                <li><a href="${ETAPPEN[18].wikipedia}">Link zur Wikipediaseite</a></li>
-                <li><a href="${ETAPPEN[18].github}">Link zur Etappenseite</a></li>
-
-            </ul>
-`;
+//let popup = `<h3>${ETAPPEN[18].titel} (Etappe ${ETAPPEN[18].nr})</h3>
+//            <ul>
+//               <li> geogr.Breite: ${ETAPPEN[18].long} </li>
+//               <li> geogr.Länge: ${ETAPPEN[18].lat} </li>
+//               <li> Nummer: ${ETAPPEN[18].nr} </li>
+//               <li><a href="${ETAPPEN[18].wikipedia}">Link zur Wikipediaseite</a></li>
+//               <li><a href="${ETAPPEN[18].github}">Link zur Etappenseite</a></li>
+//           </ul>
+//    `;
 
 
 /* Hintergrundkarte bauen. Z=Zoomfaktor, x=long, y=lat 
@@ -37,15 +36,25 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 /*addTo(map) --> map ist die Variable*/
 
-L.marker([lat, lng]).addTo(map)
-    .bindPopup(popup)
-    .openPopup();
-
+//L.marker([lat, lng]).addTo(map)
+//    .bindPopup(popup)
+//    .openPopup();
+//
 
 
 for (let etappe of ETAPPEN){
-    console.log(etappe)
+    //console.log(etappe)
+    let popup = `<h3>${etappe.titel} (Etappe ${etappe.nr})</h3>
+            <ul>
+                <li> geogr.Breite: ${etappe.long} </li>
+                <li> geogr.Länge: ${etappe.lat} </li>
+                <li> Nummer: ${etappe.nr} </li>
+                <li><a href="${etappe.wikipedia}">Link zur Wikipediaseite</a></li>
+                <li><a href="https://${etappe.github}.github.io/nz">Link zur Etappenseite</a></li>
+
+            </ul>
+        `;
     L.marker([etappe.lat, etappe.lng]).addTo(map)
-    
+        .bindPopup(popup)
 
 }
