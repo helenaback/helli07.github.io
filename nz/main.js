@@ -60,7 +60,7 @@ for (let etappe of ETAPPEN) {
     //Etappennavigation erweitern
     //"#navigation" --> id navigation wird angesprochen
     //Verbindung zwischen Script und html code --> query Selector
-    let link= `<a href="https://${etappe.github}.github.io/nz" class="etappenLink">${etappe.nr}</a>`
+    let link= `<a href="https://${etappe.github}.github.io/nz" class="etappenLink" title="${etappe.title}">${etappe.nr}</a>`;
     document.querySelector("#navigation").innerHTML += link;
 
 
