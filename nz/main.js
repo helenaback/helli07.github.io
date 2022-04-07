@@ -77,7 +77,7 @@ for (let hut of HUTS) {
                 <p>${hut.info}</p>
                 <img src="${hut.image}" alt="Vorschaubild">
                 <hr>
-                <a href="${hut.link}">Link zur Hütte</a>
+                <a href="${hut.link}" target="Neuseeland" >Link zur Hütte</a>
         `;
     L.circleMarker([hut.lat, hut.lng]).addTo(map)
         .bindPopup(popup);
