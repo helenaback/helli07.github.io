@@ -58,3 +58,22 @@ for (let etappe of ETAPPEN){
         .bindPopup(popup)
 
 }
+
+
+//DOC Hütten anzeigen 
+for (let huts of HUTS){
+    //console.log(etappe)
+    let popup = `<h3>${huts.name}</h3>
+            <ul>
+                <li> geogr.Breite: ${huts.lng} </li>
+                <li> geogr.Länge: ${huts.lat} </li>
+                <li> Nummer: ${huts.region} </li>
+                <li> <a href="${huts.image}">Link zum Bild</a> </li>
+                <li> <a href="${huts.link}">Link zur Website</a></li>
+                
+            </ul>
+        `;
+    L.marker([huts.lat, huts.lng]).addTo(map)
+        .bindPopup(popup)
+
+}
