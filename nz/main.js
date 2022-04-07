@@ -2,7 +2,11 @@
 // für einzeilige Kommentare
 
 /*L --> Leaflet Modul, map ist die id, Koordinaten in Array, 8 = Zoomstufe*/
-var map = L.map('map').setView([-34.42, 172.67], 8);
+let lat = -34.42
+let lng = 172.67
+let zoom = 8
+
+let map = L.map('map').setView([lat, lng], zoom);
 
 /* Hintergrundkarte bauen. Z=Zoomfaktor, x=long, y=lat 
 Surfer ist ein WMTS Surfer (Web Map Tile Service)*/
@@ -11,6 +15,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 /*addTo(map) --> map ist die Variable*/
 
-L.marker([-34.42, 172.67]).addTo(map)
+L.marker([lat, lng]).addTo(map)
     .bindPopup('Cape Reinga')
     .openPopup();
