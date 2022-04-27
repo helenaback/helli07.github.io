@@ -59,7 +59,7 @@ for (let etappe of ETAPPEN) {
     //Etappennavigation erweitern
     //"#navigation" --> id navigation wird angesprochen
     //Verbindung zwischen Script und html code --> query Selector
-    let link= `<a href="https://${etappe.github}.github.io/nz" class="etappenLink" title="${etappe.titel}">${etappe.nr}</a>`;
+    let link = `<a href="https://${etappe.github}.github.io/nz" class="etappenLink" title="${etappe.titel}">${etappe.nr}</a>`;
     document.querySelector("#navigation").innerHTML += link;
 
 
@@ -80,4 +80,4 @@ for (let hut of HUTS) {
         `;
     L.circleMarker([hut.lat, hut.lng]).addTo(map)
         .bindPopup(popup);
-    }
+}
