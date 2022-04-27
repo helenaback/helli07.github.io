@@ -46,9 +46,8 @@ for (let etappe of ETAPPEN) {
     //console.log(etappe)
     let popup = `<h3>${etappe.titel} (Etappe ${etappe.nr})</h3>
             <ul>
-                <li> geogr.Breite: ${etappe.long} </li>
-                <li> geogr.Länge: ${etappe.lat} </li>
-                <li> Nummer: ${etappe.nr} </li>
+                <li> geogr. Breite: ${etappe.lng} </li>
+                <li> geogr. Länge: ${etappe.lat} </li>
                 <li><a href="${etappe.wikipedia}">Link zur Wikipediaseite</a></li>
                 <li><a href="https://${etappe.github}.github.io/nz">Link zur Etappenseite</a></li>
 
