@@ -31,9 +31,9 @@ let map = L.map('map').setView(coords, zoom);
 
 /* Hintergrundkarte bauen. Z=Zoomfaktor, x=long, y=lat 
 Surfer ist ein WMTS Surfer (Web Map Tile Service)*/
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let startlayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+});
 /*addTo(map) --> map ist die Variable*/
 
 //L.marker([lat, lng]).addTo(map)
@@ -41,6 +41,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //    .openPopup();
 //
 
+let layerControl = L.control.layers({
+    "Openstreetmap": startLayer,
+    "Topograhie": L.tileLayer.provider("OpenTopoMap"),
+
+}).addTo(map);
 
 for (let etappe of ETAPPEN) {
     //console.log(etappe)
