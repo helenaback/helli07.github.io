@@ -81,3 +81,14 @@ for (let hut of HUTS) {
     L.circleMarker([hut.lat, hut.lng]).addTo(map)
         .bindPopup(popup);
 }
+
+//Massstab
+L.control.scale({
+    imperial: false,
+}).addTo(map);
+
+L.control.fullscreen().addTo(map);
+
+//Fullscree
+
+layerControl.expand();
