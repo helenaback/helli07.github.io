@@ -43,7 +43,8 @@ let startlayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 
 let layerControl = L.control.layers({
     "Openstreetmap": startlayer,
-    "Topograhie": L.tileLayer.provider("OpenTopoMap"),
+    "Topographie": L.tileLayer.provider("OpenTopoMap"),
+    "Satellite images": L.tileLayer.provider("USGS.USImagery")
 
 }).addTo(map);
 
