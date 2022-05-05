@@ -42,10 +42,15 @@ let startlayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 //
 
 let layerControl = L.control.layers({
-    "Openstreetmap": startLayer,
+    "Openstreetmap": startlayer,
     "Topograhie": L.tileLayer.provider("OpenTopoMap"),
 
 }).addTo(map);
+
+let miniMap = new L.Control.MiniMap(
+    L.tileLayer.provider("OpenStreetMap.Mapnik")
+    
+).addTo(map);
 
 for (let etappe of ETAPPEN) {
     //console.log(etappe)
